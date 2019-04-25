@@ -25,22 +25,37 @@
     console.log('%cI am some great text', 'font-size: 50px');
     console.log('%cI am some great colorful text', 
                 'font-size:50px; background:red;');
+    // console.log('%cI am some great shadow colorful text ', 
+    //             'font-size:50px; background:red; text-shadow: 10px 10px 0;');
+    
     
     
     // warning!
-
+    console.warn('Oh NOO');
+    
     // Error :|
-
+    console.error('SHOOT!!!');
     // Info
-
+    console.info('Crocodiles eat 3-4 people a year');
     // Testing
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'That is wrong!');
 
     // clearing
-
+    console.clear();
     // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
 
+    console.clear();
     // Grouping together
-
+    dogs.forEach(dog => {
+        console.group(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+        console.groupEnd(`${dog.name}`);
+    })
     // counting
 
     // timing
